@@ -1,4 +1,15 @@
-class Person:
+"""
+Record and process information about people
+Run this file directly to test its classes
+"""
+
+from classtools import AttrDisplay
+
+class Person(AttrDisplay):
+	"""
+	Create and process person records
+	"""
+
 	def __init__(self, name, job=None, pay=0):
 		self.name = name
 		self.job = job
@@ -14,6 +25,9 @@ class Person:
 		return '[Person: %s, %s]' % (self.name, self.pay)
 
 class Manager(Person):
+	"""
+	Customized person with special requirements
+	"""
 	def __init__(self, name, pay):
 		Person.__init__(self, name, 'mgr', pay)
 
